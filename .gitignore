@@ -1,0 +1,16 @@
+.DS_Store
+.idea
+*.log
+tmp/
+
+terraform
+.terraform
+tf
+
+.creds
+.terraform/
+.terraform.lock.hcl
+*.tar
+*.tfstate
+*.backup
+*.tfvars
