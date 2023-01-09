@@ -38,7 +38,7 @@ module "nuvuli_agent_lambda" {
   ]
 
   environment_variables = {
-    API = var.api_url
+    API = "${var.api_endpoint}${var.api_bootstrap_path}"
     KEY = var.api_key
     TENANT_ID = var.tenant_id
     SCHEDULE_ID = var.schedule_id

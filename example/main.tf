@@ -6,7 +6,7 @@ provider "aws" {
 module "nuvuli_agent" {
   source = "../AWS/"
 
-  api_url = var.api_url                            # URL to hit to talk to Nuvuli Cloud
+  api_endpoint = var.api_endpoint                  # URL to hit to talk to Nuvuli Cloud
   api_key = var.api_key                            # API key from the Nuvuli Cloud dashboard.  Keep this a secret.
   tenant_id = var.tenant_id                        # Tenant ID from the Nuvuli Cloud dashboard.
   schedule_id = var.schedule_id                    # Schedule ID from the Nuvuli Cloud dashboard.

@@ -1,7 +1,13 @@
 
-variable "api_url" {
+variable "api_endpoint" {
   description = "Fully qualified path to bootstrap URL"
-  default = "https://api.nuvulicloud.com/tenants/bootstrap/agent"
+  default = "https://api.nuvulicloud.com"
+  type = string
+}
+
+variable "api_bootstrap_path" {
+  description = "Fully qualified path to bootstrap URL"
+  default = "/tenants/bootstrap/agent"
   type = string
 }
 

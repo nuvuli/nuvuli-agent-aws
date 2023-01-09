@@ -1,6 +1,6 @@
 
-variable "api_url" {
-  description = "Fully qualified path to bootstrap URL"
+variable "api_endpoint" {
+  description = "Example: 'https://api.nuvulicloud.com'"
   type = string
 }
 
