@@ -6,10 +6,6 @@ locals {
   repository_name = "${data.aws_caller_identity.current.account_id}.dkr.ecr.us-east-1.amazonaws.com/nuvuli-agent"
 }
 
-data "aws_ecr_image" "nuvuli_agent_image" {
-  repository_name = "nuvuli-agent"
-  image_tag       = "latest"
-}
 
 module "nuvuli_agent_lambda" {
   source = "terraform-aws-modules/lambda/aws"
@@ -37,7 +33,8 @@ module "nuvuli_agent_lambda" {
   timeout = 600
 
   depends_on = [
-    aws_iam_role.nuvuli_agent
+    aws_iam_role.nuvuli_agent,
+    null_resource.image_handler
   ]
 
   environment_variables = {

@@ -24,3 +24,23 @@ variable "account_id" {
   description = "AWS Cloud Account Number"
   type = string
 }
+
+variable "schedule_name" {
+  description = "Display name for this schedule"
+  type = string
+}
+
+variable "matching_tags" {
+  description = "Comma-separated list of Key=Value pairs cloud resources must attach in order to be managed"
+  type = string
+}
+
+variable "schedule" {
+  description = "JSON object representing hours where resources are to be turned OFF"
+  type = string
+}
+
+variable "paused" {
+  description = "If the schedule is paused, it will NOT manage resources in any way."
+  type = bool
+}
