@@ -23,7 +23,13 @@ resource "null_resource" "schedule_api" {
   }
 
   triggers = {
-    build_number = "${timestamp()}"
+    api_key = var.api_key
+    api_endpoint = var.api_endpoint
+    tenant_id = var.tenant_id
+    account_id = var.account_id
+    schedule_name = var.schedule_name
+    matching_tags = var.matching_tags
+    paused = var.paused
   }
 
   depends_on = [
