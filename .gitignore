@@ -16,3 +16,4 @@ tf
 *.tfvars
 
 schedule.json
+payload.json

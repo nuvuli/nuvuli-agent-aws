@@ -1,4 +1,5 @@
 
+
 resource "local_file" "schedule" {
   content = var.schedule
   filename = "${path.module}/schedule.json"

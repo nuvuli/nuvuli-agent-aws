@@ -22,10 +22,7 @@ module "nuvuli_agent" {
 
    Examples from below...
 
-    "MON": [
-      "0-7",
-      "17-23"
-    ],
+    "MON": "0-7,17-23"
 
    This means
     "Every monday, I want all my resources OFF between the hours of 00:00am GMT and 07:00am GMT inclusive
@@ -33,9 +30,7 @@ module "nuvuli_agent" {
      and 23:00pm GMT inclusive."
 
 
-    "SUN": [
-      "0-23"
-    ],
+    "SUN": "0-23"
 
    This means
     "Every Sunday, I want resources to be OFF every hour of the day.  Resources will not be ON at all."
@@ -43,32 +38,18 @@ module "nuvuli_agent" {
   */
   schedule = <<EOT
   {
-    "SUN": [
-      "0-23"
-    ],
-    "MON": [
-      "0-7",
-      "17-23"
-    ],
-    "TUE": [
-      "0-7",
-      "17-23"
-    ],
-    "WED": [
-      "0-7",
-      "17-23"
-    ],
-    "THU": [
-      "0-7",
-      "17-23"
-    ],
-    "FRI": [
-      "0-7",
-      "17-23"
-    ],
-    "SAT": [
-      "0-23"
-    ]
+    "SUN": "0-23",
+    "MON": "0-7,17-23",
+    "TUE": "0-7,17-23",
+    "WED": "0-7,17-23",
+    "THU": "0-7,17-23",
+    "FRI": "0-7,17-23",
+    "SAT": "0-23"
   }
 EOT
 }
+
+
+/*
+
+*/
