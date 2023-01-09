@@ -49,7 +49,3 @@ module "nuvuli_agent" {
 EOT
 }
 
-
-/*
-
-*/
