@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 module "nuvuli_agent" {
-  source = "../AWS/"
+  source = "../"
 
   api_endpoint = var.api_endpoint                  # URL to hit to talk to Nuvuli Cloud
   api_key = var.api_key                            # API key from the Nuvuli Cloud dashboard.  Keep this a secret.
