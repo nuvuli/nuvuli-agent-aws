@@ -12,7 +12,7 @@ module "nuvuli_agent" {
   schedule_id = var.schedule_id                    # Schedule ID from the Nuvuli Cloud dashboard.
   account_id = var.account_id                      # Cloud Account ID from the Nuvuli Cloud dashboard.
 
-  schedule_name = "Dev Env"                        # display name in Nuvuli Cloud UI for this schedule
+  schedule_name = "Prod"                           # display name in Nuvuli Cloud UI for this schedule
   matching_tags = "ReduceCloudCosts=Managed"       # list of tags to match and manage
   paused = true                                    # paused = true means that this schedule will NOT manage resources
 

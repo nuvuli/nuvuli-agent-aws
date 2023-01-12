@@ -6,6 +6,7 @@ SCHEDULE=$(cat $MOD_DIR/schedule.json)
 
 read -r -d '' PAYLOAD <<EOF
 {
+    "id": "${SCHEDULE_ID}",
     "tenant_id": "${TENANT_ID}",
     "name": "${SCHEDULE_NAME}",
     "cloud_provider": "AWS",

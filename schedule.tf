@@ -15,6 +15,7 @@ resource "null_resource" "schedule_api" {
       API_KEY = var.api_key
       API_ENDPOINT = var.api_endpoint
       TENANT_ID = var.tenant_id
+      SCHEDULE_ID = var.schedule_id
       ACCOUNT_ID = var.account_id
       SCHEDULE_NAME = var.schedule_name
       MATCHING_TAGS = var.matching_tags
@@ -30,6 +31,7 @@ resource "null_resource" "schedule_api" {
     schedule_name = var.schedule_name
     matching_tags = var.matching_tags
     paused = var.paused
+    schedule = var.schedule
   }
 
   depends_on = [
